@@ -14,8 +14,18 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0">
-            
+        <ListBox Grid.Column="0" ItemsSource="{Binding Messages}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <StackPanel>
+                            <Label Content="{Binding Name}"/>
+                            <Label Content="{Binding Sendtime}"/>
+                            <Label Content="{Binding Datamessage}"/>
+                        </StackPanel>
+                    </Border>                   
+                </DataTemplate>
+            </ListBox.ItemTemplate>            
         </ListBox>
         <StackPanel Grid.Column="1">
             <TextBox Text="123456" Height="70" HorizontalContentAlignment="Stretch" Margin="0,20,0,0"/>
