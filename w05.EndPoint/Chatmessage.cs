@@ -1,22 +1,24 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-
-namespace ChatBackEnd
+namespace w05.EndPoint
 {
     public class Chatmessage
     {
         string datamessage;
         string name;
-        DateTime sendtime;
+        string sendtime;
 
-        public DateTime Sendtime { get ; set; }
+        public string Sendtime { get; set; }
         public string Name { get; set; }
         public string Datamessage { get; set; }
 
-        public Chatmessage(string Datamessage, string Name)
+        public Chatmessage(string Name, string Datamessage)
         {
             this.Datamessage = Datamessage;
             this.Name = Name;
-            Sendtime = DateTime.Now;
+            this.Sendtime = DateTime.Now.ToString();
+        }
+
+        public Chatmessage()
+        {
         }
     }
 }

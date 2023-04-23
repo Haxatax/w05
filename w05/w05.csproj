@@ -12,7 +12,7 @@
     <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChatBackEnd\ChatBackEnd.csproj" />
+    <ProjectReference Include="..\w05.EndPoint\w05.EndPoint.csproj" />
   </ItemGroup>
 
 </Project>

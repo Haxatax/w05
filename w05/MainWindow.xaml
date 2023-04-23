@@ -14,21 +14,22 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Messages}">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Messages}" HorizontalAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1">
-                        <StackPanel>
-                            <Label Content="{Binding Name}"/>
-                            <Label Content="{Binding Sendtime}"/>
-                            <Label Content="{Binding Datamessage}"/>
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <Label Content="{Binding Name}"/> <!--{Binding Name}-->
+                            <Label Content="{Binding Sendtime}"/> <!--{Binding Sendtime}-->
+                            <Label Content="{Binding Datamessage}"/> <!--{Binding Datamessage}-->
                         </StackPanel>
                     </Border>                   
                 </DataTemplate>
             </ListBox.ItemTemplate>            
         </ListBox>
         <StackPanel Grid.Column="1">
-            <TextBox Text="123456" Height="70" HorizontalContentAlignment="Stretch" Margin="0,20,0,0"/>
+            <TextBox Text="{Binding UserName}" Height="30" HorizontalContentAlignment="Stretch" Margin="0,20,0,0"/>
+            <TextBox Text="{Binding TextMessage}" Height="70" HorizontalContentAlignment="Stretch" Margin="0,20,0,0"/>
             <Button Content="Send message" Height="40" HorizontalContentAlignment="Stretch" Margin="0,35,0,0" FontSize="14" Command="{Binding SendMessageCommand}"/>
         </StackPanel>
 

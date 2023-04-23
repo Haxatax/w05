@@ -17,7 +17,7 @@ namespace w05
     {
         HttpClient client;
 
-        public RestService(string baseurl, string pingableEndpoint = "swagger")
+        public RestService(string baseurl, string pingableEndpoint = "message")
         {
             bool isOk = false;
             do
