@@ -53,11 +53,11 @@ namespace w05
                 Messages = new RestCollection<Chatmessage>("http://localhost:5091/", "swagger"); //,"hub"
                 SendMessageCommand = new RelayCommand(() =>
                 {
-                    Messages.Add(new Chatmessage()
-                    {
-                        Name = UserName,
-                        Datamessage = TextMessage
-                    });
+                    Messages.Add(new Chatmessage(UserName, TextMessage));
+                    //{
+                    //    Name = UserName,
+                    //    Datamessage = TextMessage
+                    //});
                 });
             }
         }

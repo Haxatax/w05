@@ -9,10 +9,10 @@ namespace w05.EndPoint.Controllers
     [ApiController]
     public class ChatmessageController : ControllerBase
     {
-        private static List<Chatmessage> messages = new List<Chatmessage>();
+        static List<Chatmessage> messages = new List<Chatmessage>();
         IHubContext<SignalRHub> hub;
-        //public ChatmessageController(IHubContext<SignalRHub> hub)
-        //{
+        //public ChatmessageController(List<Chatmessage> messages, IHubContext<SignalRHub> hub)
+        //{        
         //    this.hub = hub;
         //}
         [HttpPost]       
